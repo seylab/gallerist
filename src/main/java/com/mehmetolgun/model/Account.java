@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import com.mehmetolgun.enums.CurrencyType;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "account")
 @Getter
@@ -23,7 +25,7 @@ public class Account extends BaseEntity {
     private String iban;
 
     @Column(name = "amount")
-    private String amount;
+    private BigDecimal amount;
 
     @Column(name = "currencyType")
     @Enumerated(EnumType.STRING)
